@@ -19,6 +19,6 @@ m = (kumpulan_titik[2][0] - kumpulan_titik[0][0])**2 + (kumpulan_titik[2][1] - k
 
 
 if k == l or l == m or k == m:
-    print("ini Segitiga cama kaki")
+    print("ini Segitiga sama kaki")
 else:
-    print("ini Bukan segitiga cama kaki")
+    print("ini Bukan segitiga sama kaki")
