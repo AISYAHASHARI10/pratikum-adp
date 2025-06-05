@@ -1,9 +1,9 @@
-# Baca file dan simpan ke list
+
 data_praktikan = []
 
 file = open("data_totnilai_sementara_pratikan.txt", "r")
 for line in file:
-    data_baris = []  # Ganti nama temp jadi data_baris
+    data_baris = []  
     kata = ""
     for huruf in line:
         if huruf == ',' or huruf == '\n':
@@ -22,7 +22,6 @@ for line in file:
     data_praktikan.append([nim, nama, totpretest, totpostest, tottugas])
 file.close()
 
-# Hitung nilai akhir dan tulis ke file baru
 file_out = open("data_nilai_akhir.txt", "w")
 file_out.write("NIM,Nama,Pretest,Postest,Tugas,Nilai Akhir\n")
 
@@ -35,7 +34,7 @@ for i in range(len(data_praktikan)):
     file_out.write(f"{data_praktikan[i][0]},{data_praktikan[i][1]},{pre},{post},{tugas},{nilai_akhir:.2f}\n")
 file_out.close()
 
-# Analisis
+
 jumlah = len(data_praktikan)
 total = 0
 nilai_tertinggi = data_praktikan[0][5]
@@ -59,7 +58,6 @@ for i in range(jumlah):
     if data_praktikan[i][5] < rata2:
         bawah_rata += 1
 
-# Output
 print("Nilai rata-rata:", round(rata2, 2))
 print("Nilai tertinggi:", round(nilai_tertinggi, 2), "oleh", praktikan_tertinggi)
 print("Nilai terendah:", round(nilai_terendah, 2), "oleh", praktikan_terendah)
