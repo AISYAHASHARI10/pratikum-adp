@@ -5,11 +5,7 @@ pesan = "    HAPPY EID  "
 lebar = 15
 total_langkah = 20
 delay = 1
-
-
 pesan_panjang = pesan * 5
-
-# Animasi scroll
 i = 0
 while i < total_langkah:
     os.system('cls')  
